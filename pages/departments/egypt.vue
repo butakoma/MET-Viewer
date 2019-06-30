@@ -1,12 +1,20 @@
 <template>
   <section class="container">
     <div>
-      <div>
+      <div v-if="results.primaryImageSmall !== ''">
         <img v-bind:src="results.primaryImageSmall">
+      </div>
+      <div v-else class="no-picture">
+        No Picture
       </div>
       <div>
         <span>
           {{ results.title }}
+        </span>
+      </div>
+      <div>
+        <span>
+          {{ results.artistDisplayName }}
         </span>
       </div>
     </div>
@@ -23,6 +31,7 @@ export default {
     const objectId = objectIds[index]
     const url = 'https://collectionapi.metmuseum.org/public/collection/v1/objects/'
     const data = await app.$axios.$get(url + objectId)
+    console.log('pic url:', data.primaryImageSmall)
     return { results: data }
   }
 }

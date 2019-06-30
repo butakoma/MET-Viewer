@@ -1,12 +1,20 @@
 <template>
   <section class="container">
     <div>
-      <div>
+      <div v-if="results.primaryImageSmall !== ''">
         <img v-bind:src="results.primaryImageSmall">
+      </div>
+      <div v-else class="no-picture">
+        No Picture
       </div>
       <div>
         <span>
           {{ results.title }}
+        </span>
+      </div>
+      <div>
+        <span>
+          {{ results.artistDisplayName }}
         </span>
       </div>
     </div>

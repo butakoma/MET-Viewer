@@ -63,4 +63,11 @@ html {
   color: #fff;
   background-color: #35495e;
 }
+
+.no-picture{
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+  background-color: darkgray;
+}
 </style>
