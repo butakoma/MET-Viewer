@@ -22,3 +22,9 @@
      </div>
  </nav>
 </template>
+
+<style>
+.navbar{
+    background-color: #F9DDBB;
+}
+</style>

@@ -2,7 +2,7 @@
   <section class="container">
     <div>
       <div v-if="results.primaryImageSmall !== ''">
-        <img v-bind:src="results.primaryImageSmall">
+        <img class="pic-image" v-bind:src="results.primaryImageSmall">
       </div>
       <div v-else class="no-picture">
         No Picture
@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  async asyncData({ app }) {
+  async asyncData ({ app }) {
     const departmentUrl = 'https://collectionapi.metmuseum.org/public/collection/v1/objects?departmentIds=10'
     const objectIdData = await app.$axios.$get(departmentUrl)
     const objectIds = objectIdData.objectIDs

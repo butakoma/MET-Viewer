@@ -1,8 +1,11 @@
 <template>
   <section class="container">
     <div>
+      <div>
+        Today's Recommend...
+      </div>
       <div v-if="results.primaryImageSmall !== ''">
-        <img v-bind:src="results.primaryImageSmall">
+        <img class="pic-image" v-bind:src="results.primaryImageSmall">
       </div>
       <div v-else class="no-picture">
         No Picture
@@ -23,7 +26,7 @@
 
 <script>
 export default {
-  async asyncData({ app }) {
+  async asyncData ({ app }) {
     const id = Math.floor(Math.random() * 471581)
     const url = 'https://collectionapi.metmuseum.org/public/collection/v1/objects/'
     const data = await app.$axios.$get(url + id)

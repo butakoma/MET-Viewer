@@ -35,10 +35,15 @@ html {
   margin: 0;
 }
 
+.pic-image{
+  height: 400px;
+}
+
 .no-picture{
   width: 200px;
   height: 200px;
   line-height: 200px;
+  margin: auto;
   background-color: darkgray;
 }
 </style>
