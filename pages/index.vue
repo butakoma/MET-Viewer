@@ -1,7 +1,7 @@
 <template>
   <section class="container">
     <div>
-      <div>
+      <div class="top-message">
         Today's Recommend...
       </div>
       <div v-if="results.primaryImageSmall !== ''">
@@ -67,5 +67,10 @@ export default {
 
 .links {
   padding-top: 15px;
+}
+
+.top-message {
+  font-family: sans-serif;
+  font-size: 18px;
 }
 </style>
