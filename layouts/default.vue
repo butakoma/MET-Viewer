@@ -37,6 +37,7 @@ html {
 
 .pic-image{
   height: 400px;
+  box-shadow: 5px 5px 5px;
 }
 
 .no-picture{
